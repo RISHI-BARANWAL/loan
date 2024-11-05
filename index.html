@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title title="BANK LOAN">BANK LOAN</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            /* background-image: url(../assets/images/loan.jpg); */
+            background-image: url(../assets/images/man.png);
+            background-color: black;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            /* overflow: hidden; */
+            margin: 0;
+            padding: 0;
+            /* border: 2px solid black; */
+            /* z-index: -1; */
+        }
+        .head .nav{/*linear-gradient(45deg, black, gray, white);  radial-gradient(red, orange, yellow, greenyellow, green, aqua, blue, purple); */
+            /* background-image: radial-gradient(red, orange, yellow, greenyellow, green, aqua, blue, purple); */
+            display: inline-flex;
+            position: fixed;  /*can be un or commented*/
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 125px;
+            width: 100%;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            z-index: 1;
+            /* justify-content: end; */
+            /* align-content: center; vertically centre*/
+            /* justify-content: center; horizetal centre*/
+            /* text-align: center;  horizetal text centre*/
+            /* justify-items: center; */
+            /* justify-self: center; */
+        }
+        .i1{
+            padding: 20px;
+            /* border: 1px solid white; */
+            /* float: left !important; */
+            /* justify-content: left; */
+            height: 80px;
+            width: 80px;
+            transition: 0.8s;
+        }
+        .i1:hover{
+            padding: 10px;
+            height: 100px;
+            width: 100px;
+            transition: 0.5s;
+            /* transform: rotate(360deg); */
+        }
+        table tr #td a{
+            /* float: right;
+            justify-items: right;
+            justify-content: right;
+            justify-self: right; */
+            padding-right: 20px;
+            color: #f8e2ab;
+            font-style: normal;
+            text-decoration: none;
+            transition: .5s;
+        }
+        table tr #td a:hover{
+            font-size: xx-large;
+            transition: .5s;
+        }
+        .s1{
+            align-content: center;
+            margin-left: auto; /* Pushes LOGIN to the right */
+            padding-right: 60px;
+            transition: 0.5s;
+        }
+        .s1 a{
+            color: #fae7b8;
+            text-decoration: none;
+        }
+        .s1:hover{
+            font-size: xx-large;
+            transition: .5s;
+        }
+        .txt h2{
+            position: inherit;
+            border: 1px solid white;
+            padding: 5px;
+            margin: 35px;
+            color: #fae7b8;
+        }
+        .txt h2:hover{
+            color: whitesmoke;
+        }
+        .body{
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            /* background-color: rgba(33, 30, 30, 0.842); */
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+        }
+        .main{
+            background-color: rgba(0, 0, 0, 0.455);
+            /* position: absolute; */
+            color: #f8e2ab;
+            margin: 0;
+            padding: 0;
+            margin-top: -10vh;
+            /* z-index: 1; */
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            text-align: center;
+            letter-spacing: 10px;
+            word-spacing: 10px;
+            font-stretch: 20px;
+            line-height: 100px;
+            height: 800px;
+            width: 100%;
+            z-index: 1;
+        }
+        .section{
+            background-color: whitesmoke;
+            /* position: absolute; */
+            /* z-index: 2; */
+            margin: 0;
+            padding: 0;
+            margin-top: -20px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center;
+            align-content: center;
+        }
+        .footer{
+            /* position: absolute; */
+            margin: 0;
+            padding: 0;
+            /* background-color: #f8e2ab; */
+            background-color: #000000;
+            color: #f8e2ab;
+            margin-top: -20px;
+            height: 120px;
+            text-align: center;
+            align-content: center;
+            /* z-index: 1; */
+        }
+        .footer table tr th a{
+            text-decoration: none;
+            color: #f8e2ab;
+        }
+
+        .res table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .res{
+            height: 118vh;
+            width: 100%;
+            margin-top: -150px;
+            padding-top: 170px;
+            text-align: center;
+            justify-content: center;
+            background-color: #fae7b864;
+            /* margin-bottom: 10px; */
+        }
+
+        .form{
+            /* display: grid;
+            grid-template-columns: 7fr 5fr; */
+            margin-top: 20px;
+            margin-left: 300px;
+            padding: 70px;
+            width: 540px;
+            height: 68vh;
+            background-color: #ffffff;
+            box-shadow: -7px 7px 20px rgba(0, 0, 0, 0.2);
+        }
+        .u{
+            border: none;
+            border-bottom: 2px solid #000;  /* Adds underline */
+            outline: none;                    /* Removes the focus outline */
+            background: transparent;          /* Removes background */
+            width: 95%;                      /* Optional: make it full-width */
+            padding: 5px 0;                   /* Optional: space above and below */
+            font-size: 16px;                  /* Adjust text size */
+            color: #0150ff;
+            font-size: medium;
+            resize: none;
+            /* line-height: 1.8; */
+        }
+        .u:hover{
+            border-bottom: 2px solid #0150ff;
+        }
+        .btn{
+            width: 150px;
+            height: 40px;
+            border-radius: 50px;
+            border: 2px solid #0150ff;
+            background-color: #0150ff;
+            color: white;
+            text-align: center;
+            margin-left: -400px;
+            margin-top: 15px;
+        }
+        .btn:hover{
+            background-color: #ffffff;
+            color: black;
+        }
+
+
+        .loan{
+            /* display: grid; */
+            /* grid-template-columns: 5fr 7fr; */
+            height: 255vh;
+            width: 100%;
+            margin-top: -40px;
+            margin-bottom: 35px;
+            padding-top: 100px;
+            text-align: center;
+            justify-content: center;
+            background-color: #e6dacf;
+            /* margin-bottom: 10px; */
+            z-index: 1;
+        }
+        .loan table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card{
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            margin-top: 50px;
+            margin-left: 260px;
+            padding: 0;
+            width: 750px;
+            height: 60vh;
+            background-color: #ffffff;
+            box-shadow: -5px 7px 20px rgba(0, 0, 0, 0.2);
+        }
+        .loan .p{
+            width: 710px;
+            height: 80px;
+            margin-left: 180px;
+            padding-left: 100px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            font-size: 30;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+            font-weight: bold;
+        }
+
+        .card .lc{
+            margin-top: 60px;
+        }
+        .lc .t1{
+            color: #0150ff;
+            font-size: large;
+            font-weight: bolder;
+            padding-left: 20px;
+        }
+        .lc .t2{
+            text-align: left;
+            padding-left: 20px;
+        }
+        .card .rc{
+            margin: 0;
+            padding: 0;
+            height: 60vh;
+            /* border: 2px solid black; */
+        }
+        .rc img{
+            height: 100%;
+            width: 100%;
+        }
+        .box{
+            /* margin-top: 60px; */
+            height: 50px;
+            width: 11px;
+            background-color: #0150ff;
+            margin-left: -3px;
+        }
+        .card-p{
+            padding: 40px;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            font-size: 30;
+            text-align: left;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+     <!-- .header.nav$*5{n$} -->
+     <!-- .header>.nav -->
+     <div class="head" id="home">
+        <div class="nav">
+            <img class="i1" src="../assets/images/home.jpg" title="BANK LOAN">
+            <table border="0" cellspacing="20px" cellpadding="20px">
+                <tr>
+                    <td id="td"><a href="#home">HOME</a></td>
+                    <td id="td"><a href="#loan">LOAN</a></td>
+                    <td id="td"><a href="#res">HELP</a></td>
+                </tr>
+            </table>
+            <div class="txt">
+                <h2 title="BANK LOAN COMPANY">BANK LOAN</h2>
+            </div>
+            <span class="s1"><a href="./2login.html">LOGIN</a></span>
+        </div>
+     </div>
+    <div class="body">
+        <div class="main">
+            <p><br><br><br><h1>Investing in<br>Tomorrow's Future</h1></p>
+        </div><br>
+     <div class="section">
+        <h1>ROWLAND</h1>
+        <h1>VENTURE CAPITAL</h1>
+        <pre>&nbsp;&nbsp;&nbsp;I'm a paragraph. Click here to add your own text and edit me.
+
+        It’s easy. Just click “Edit Text” or double click me to add your &nbsp;
+            
+        own content and make changes to the font. Feel free to drag and drop 
+            
+        me anywhere you like on your page. I’m a great place for you to &nbsp;
+            
+        tell a story and let your users know a little more about you. &nbsp;
+        </pre>
+     </div>
+    </div><br id="loan">
+
+    <div class="loan">
+        <table>
+            <tr>
+                <td><div style="height: 16px; width: 16px; background-color: #0150ff;"></div></td>
+                <td><h1>FINANCIAL LOAN</h1></td>
+            </tr>
+        </table><br>
+        <div class="p">
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+        </div><br>
+        
+        <!-- <div style="display: grid; grid-template-columns: 6fr 6fr;">
+            <h2>Experience</h2><input type="button" class="btn" value="DOWNLOAD CV">
+        </div> -->
+
+        <div class="card">
+            <div class="lc">
+                <table align="left">
+                    <tr>
+                        <td rowspan="2"><div class="box"></div></td>
+                        <td><div class="t1"><b>Name 01</b></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="t2">Role Title</div></td>
+                    </tr>
+                </table><br><br>
+                <p class="card-p">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+            </div>
+            <div class="rc"><img src="../assets/images/Leaflet.jpg"></div>
+        </div>
+
+        <div class="card">
+            <div class="lc">
+                <table align="left">
+                    <tr>
+                        <td rowspan="2"><div class="box"></div></td>
+                        <td><div class="t1"><b>Name 02</b></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="t2">Role Title</div></td>
+                    </tr>
+                </table><br><br>
+                <p class="card-p">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+            </div>
+            <div class="rc"><img src="../assets/images/Website_Mockup.webp"></div>
+        </div>
+
+        <div class="card">
+            <div class="lc">
+                <table align="left">
+                    <tr>
+                        <td rowspan="2"><div class="box"></div></td>
+                        <td><div class="t1"><b>Name 03</b></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="t2">Role Title</div></td>
+                    </tr>
+                </table><br><br>
+                <p class="card-p">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+            </div>
+            <div class="rc"><img src="../assets/images/App Screen.webp"></div>
+        </div>
+
+    </div>
+
+    <div class="body">
+        <div class="main">
+            <p><br><br><br><h1>Investing in<br>Tomorrow's Future</h1></p>
+        </div><br>
+     <div class="section">
+        <h1>ROWLAND</h1>
+        <h1>VENTURE CAPITAL</h1>
+        <pre>&nbsp;&nbsp;&nbsp;I'm a paragraph. Click here to add your own text and edit me.
+
+        It’s easy. Just click “Edit Text” or double click me to add your &nbsp;
+            
+        own content and make changes to the font. Feel free to drag and drop 
+            
+        me anywhere you like on your page. I’m a great place for you to &nbsp;
+            
+        tell a story and let your users know a little more about you. &nbsp;
+        </pre>
+     </div>
+    </div><br><br><hr>
+    <div class="res" id="res">
+        <h1></h1>
+        <table>
+            <tr>
+                <td><div style="height: 16px; width: 16px; background-color: #0150ff;"></div></td>
+                <td><h1>Let's Talk</h1></td>
+            </tr>
+        </table><br>
+
+        <div class="form">
+            <form>
+            <table style="text-align: left; border-spacing: 0 15px;">
+                <tr>
+                    <td>First Name *</td>
+                    <td>Last Name *</td>
+                </tr>
+                <tr>
+                    <td><input type="text" style="width: 90%;" class="u" id="firstName"></td>  <!--autofocus-->
+                    <td><input type="text" style="width: 90%; justify-content: right;" class="u" id="lastName"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Email *</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="email" size="100" class="u" id="email"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Subject</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" size="100" class="u" id="subject"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Message</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea size="100" class="u" rows="4" placeholder="" id="message"></textarea></td>
+                </tr>
+            </table>
+            <input type="button" value="Send" class="btn" onclick="val()">
+            </form>
+        </div><br>
+    </div><br>
+    <div class="footer">
+        <br><span>&copy; ASRB</span>
+        <table border="0" align="center" cellpaddiong="10" cellspacing="30">
+            <tr> <!--rowspan, colspan-->
+                <th>Contact Us:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th><a href="tel:7784941718">+91 99353600XX</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th><a href="mailto:rishibaranwal22@gmail.com">admin@gmail.com</a></th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+    function val() {
+        // Regex patterns
+        const nameRegex = /^[a-zA-Z]{2,}(?: [a-zA-Z]+)*$/;
+        const emailRegex = /^[a-z0-9]([\.{1}])?([a-z0-9.]+){1,25}\@gmail[\.]com$/ ;
+        const subjectRegex = /^[\w\s]{2,}$/;
+        const messageRegex = /^.{1,}$/;
+    
+        // Get form values
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+    
+        // Validation
+        if (!nameRegex.test(firstName)) {
+            alert("Please enter a valid first name.");
+            return false;
+        }
+        if (!nameRegex.test(lastName)) {
+            alert("Please enter a valid last name.");
+            return false;
+        }
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+        if (!subjectRegex.test(subject)) {
+            alert("Please enter a valid subject.");
+            return false;
+        }
+        if (!messageRegex.test(message)) {
+            alert("Message cannot be empty.");
+            return false;
+        }
+    
+        // Display form details in an alert
+        alert("Form submitted successfully!\n\n" +
+              "Details:\n" +
+              "First Name: " + firstName + "\n" +
+              "Last Name: " + lastName + "\n" +
+              "Email: " + email + "\n" +
+              "Subject: " + subject + "\n" +
+              "Message: " + message);
+    
+        return true;  // You can add form submission logic here if needed
+    }
+    </script>
+</html>
